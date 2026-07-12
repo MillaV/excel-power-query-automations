@@ -34,6 +34,14 @@ Tässä projektissa säätiedoista haetaan vain lämpötila sekä ilmanpaineen k
 - **Kiinteästä hausta joustavaan hakuun:** Ensimmäinen versioni haki tiedot aina vain taulukon ensimmäiseltä riviltä, joten uusien kalastuspäivien lisääminen ei toiminut. Jouduin rakentamaan ratkaisun uudelleen niin, että sama haku toistuu automaattisesti jokaiselle riville erikseen.
 - **Tekoäly (Claude) ei tehnyt virheitä tyhjäksi, mutta nopeutti niiden ratkaisemista:** Käytin projektin tekemisessä apuna Claudea sparrauskumppanina koko prosessin ajan. Vaikka tekoäly ehdotti korjauksia, matkan varrella tuli silti useita virheilmoituksia – osa johtui väärinymmärryksistä puolin ja toisin, osa siitä, että ongelma paljastui vasta kun kokeilin ratkaisua käytännössä. Tekoälyn kanssa työskentely on iteratiivista: virhe, korjausehdotus, uusi testi, seuraava virhe – ei suoraa "kysy ja saat toimivan koodin" -prosessia.
 
+## Datan eheyden varmistaminen
+Kalastukset-taulukon Aloitusaika- ja Lopetusaika-sarakkeisiin on asetettu Excelin Tietojen kelpoisuuden tarkistaminen -työkalulla seuraavat säännöt, jotka estävät virheellisen datan syöttämisen jo kirjaushetkellä.
+
+| Sarake | Kaava | Mitä sääntö tekee | 
+|---|---|---|
+| Aloitusaika | `=B2<=NYT()` | Aloitusaika ei saa koskaan olla tulevaisuudessa. 
+| Lopetusaika | `=TAI(C2="";JA(TAI(B2="";C2>B2);C2<=NYT()))` | Lopetusaika saa olla tyhjä. Jos se on täytetty, sen täytyy olla aloitusajan jälkeen (mikäli aloitusaika on annettu) eikä se saa olla tulevaisuudessa. | 
+
 ## Mitä opin
 - Kannattaa testata jokainen rakennuspala (raakadatan haku, yhden rivin laskenta) erikseen ennen kuin yhdistää ne isommaksi automaatioksi – tämä paljastaa virheet paljon aikaisemmin kuin jos yrittää rakentaa koko putken kerralla.
 - Kiinnittämään huomiota siihen, että jo kirjausvaiheessa data kirjataan oikein. Excelin työkalulla "Tietojen kelpoisuuden tarkastaminen" pystyy asettamaan ehtoja, jotta kirjaukset menee oikein.
