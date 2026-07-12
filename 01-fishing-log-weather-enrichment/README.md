@@ -39,10 +39,5 @@ Tässä projektissa säätiedoista haetaan vain lämpötila sekä ilmanpaineen k
 - Kiinnittämään huomiota siihen, että jo kirjausvaiheessa data kirjataan oikein. Excelin työkalulla "Tietojen kelpoisuuden tarkastaminen" pystyy asettamaan ehtoja, jotta kirjaukset menee oikein.
 - Tekoälyn käyttö kehitystyössä on taito siinä missä koodaaminenkin: osasin kuvata virhetilanteet tarkasti (mm. kuvakaappauksilla) ja edetä pienin askelin, mikä teki yhteistyöstä tehokasta. Jatkossa määrittelisin vielä tarkemmin alkuun projektin suunnitelmaa.
 
-- ## Jatkokehitysideat
-- Virheilmoitusten sijaan käyttöliittymään voisi lisätä selkeän tekstin ("Tarkista aloitus-/lopetusaika"), kun rivi jää tyhjäksi.
-- Sääaseman (FMISID) voisi hakea automaattisesti sijainnin perusteella, jos kalastuspaikkoja olisi useampi (aiemmin hylätty toteutustapa – ks. alkuperäinen Miro-suunnitelma).
-- Automaattinen päivitys tiedoston avautuessa ("Refresh on open") sen sijaan, että käyttäjä painaa "Päivitä kaikki" manuaalisesti.
-
 ## Kuvakaappaukset
 *(lisää vielä: Kalastukset-taulukko, Power Query -funktio HaeKeskiarvo, KalastuksetAutomaatio-kyselyn koodi, Tulokset-välilehti)*
