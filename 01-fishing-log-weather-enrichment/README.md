@@ -48,4 +48,10 @@ Kalastukset-taulukon Aloitusaika- ja Lopetusaika-sarakkeisiin on asetettu Exceli
 - Tekoälyn käyttö kehitystyössä on taito siinä missä koodaaminenkin: osasin kuvata virhetilanteet tarkasti (mm. kuvakaappauksilla) ja edetä pienin askelin, mikä teki yhteistyöstä tehokasta. Jatkossa määrittelisin vielä tarkemmin alkuun projektin suunnitelmaa.
 
 ## Kuvakaappaukset
-*(lisää vielä: Kalastukset-taulukko, Power Query -funktio HaeKeskiarvo, KalastuksetAutomaatio-kyselyn koodi, Tulokset-välilehti)*
+**Kalastukset-taulukko** – käyttäjän syöttämä lähtödata (FMISID, aloitus- ja lopetusaika, saalismäärä):
+
+![Kalastukset-taulukko](screenshots/kalastukset-taulukko.jpg)
+
+**Tulokset-taulukko** – automaattisesti täydentyneet lämpötila- ja ilmanpainekeskiarvot:
+
+![Tulokset-taulukko](screenshots/tulokset-taulukko.jpg)
